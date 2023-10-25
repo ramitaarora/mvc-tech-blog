@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Lora', serif;
 }
 
 main {
@@ -24,6 +25,11 @@ nav {
     padding: 40px;
 }
 
+nav h1 {
+    font-size: 250%;
+    font-style: italic;
+}
+
 ul {
     display: flex;
 }
@@ -31,11 +37,16 @@ ul {
 li {
     list-style: none;
     margin: 0 10px;
+    font-size: 120%;
 }
 
 a {
     color: white;
     text-decoration: none;
+}
+
+a:hover {
+    font-size: 130%;
 }
 
 footer {
@@ -45,6 +56,7 @@ footer {
     background-color: var(--primary);
     color: white;
     padding: 20px;
+    font-size: 80%;
 }
 
 /* Body Styles */
