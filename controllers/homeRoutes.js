@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     });
 
     const blogPosts = blogPostData.map(post => post.get({plain:true}));
-    console.log(blogPosts);
+    // console.log(blogPosts);
 
     res.render('homepage', {
         logged_in: true,
