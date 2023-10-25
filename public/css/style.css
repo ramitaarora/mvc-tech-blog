@@ -163,6 +163,7 @@ textarea {
     border: 1px solid lightgrey;
     margin: 60px auto;
     padding: 40px;
+    border-radius: 20px;
 }
 
 .form-group {
