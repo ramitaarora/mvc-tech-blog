@@ -1,9 +1,9 @@
 <main>
     {{#each blogPosts as |post|}}
-        <div id="blog-post"><a href='/api/post/{{post.id}}'>
+        <div id="blog-post"><a href='/api/blog/{{post.id}}'>
             <div id="post-header">
                 <h2>{{post.post_name}}</h2>
-                <p>{{post.user.name}}</p>
+                <p>Author: {{post.user.name}}</p>
             </div>
             <div id="post-preview">
                 <p>{{post.post_content}}</p>

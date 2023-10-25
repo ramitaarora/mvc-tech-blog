@@ -7,12 +7,12 @@ router.get('/', async (req, res) => {
         include: [{model: User}],
     });
 
-    const blogPosts = blogPostData.map(post => post.get({plan:true}));
+    const blogPosts = blogPostData.map(post => post.get({plain:true}));
     console.log(blogPosts);
 
     res.render('homepage', {
         logged_in: true,
-        blogPosts
+        blogPosts,
     });
 });
 
