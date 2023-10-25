@@ -20,7 +20,7 @@ Posts.init(
             allowNull: false,
         },
         author_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'user',
