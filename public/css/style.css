@@ -2,6 +2,7 @@
 
 :root {
     --primary: teal;
+    --secondary: rgb(106, 163, 163);
 }
 
 * {
@@ -40,12 +41,12 @@ li {
     font-size: 120%;
 }
 
-a {
+nav a {
     color: white;
     text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
     font-size: 130%;
 }
 
@@ -68,6 +69,15 @@ footer {
     border-radius: 30px;
 }
 
+#blog-post a {
+    text-decoration: none;
+    color: black;
+}
+
+#blog-post a:hover {
+    cursor: pointer;
+}
+
 #post-header {
     display: flex;
     justify-content: space-between;
@@ -81,5 +91,6 @@ footer {
 
 .read-more {
     text-align: right;
-    color: grey;
+    font-style: italic;
+    color: var(--secondary);
 }
