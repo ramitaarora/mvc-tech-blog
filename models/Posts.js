@@ -37,4 +37,4 @@ Posts.init(
     }
 );
 
-module.exports = Food;
+module.exports = Posts;
