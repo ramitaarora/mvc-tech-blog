@@ -19,8 +19,9 @@ Posts.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        author: {
+        author_id: {
             type: DataTypes.STRING,
+            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
