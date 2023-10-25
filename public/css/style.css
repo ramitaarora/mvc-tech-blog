@@ -78,3 +78,8 @@ footer {
 #post-preview {
     margin-top: 20px;
 }
+
+.read-more {
+    text-align: right;
+    color: grey;
+}
