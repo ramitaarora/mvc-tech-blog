@@ -5,8 +5,8 @@ Posts.belongsTo(User, {
     foreignKey: 'author_id',
 });
 
-// User.hasMany(Posts, {
-//     foreignKey: 'id',
-// })
+User.hasMany(Posts, {
+    foreignKey: 'author_id',
+})
 
 module.exports = { User, Posts };
