@@ -3,7 +3,6 @@ const commentBox = document.querySelector('#comment');
 
 formSubmit.addEventListener('submit', async(event) => {
     event.preventDefault();
-    // console.log(commentBox.value);
     if (commentBox.value) {
         const commentData = await fetch('/api/blog/comment', {
             method: 'POST',
