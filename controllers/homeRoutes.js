@@ -24,11 +24,23 @@ router.get('/login', (req, res) => {
     }
 });
 
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', async (req, res) => {
     if (!req.session.logged_in) {
         res.render('login');
     } else {
-        res.render('dashboard', {logged_in: req.session.logged_in});
+        const blogPostData = await Posts.findAll({
+            include: [{model: User}],
+            where: {
+                author_id: req.session.user_id
+            }
+        });
+    
+        const blogPosts = blogPostData.map(post => post.get({plain:true}));
+        console.log(blogPosts);
+        res.render('dashboard', {
+            logged_in: req.session.logged_in,
+            blogPosts,
+        });
     }
 });
 
