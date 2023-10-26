@@ -15,6 +15,28 @@ main {
     margin: 20px;
 }
 
+/* Button Styles */
+
+#submit-button, 
+.form-group button, 
+#update-button, 
+#delete-button {
+    padding: 10px;
+    width: 100px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+#submit-button:hover, 
+.form-group button:hover, 
+#update-button:hover, 
+#delete-button:hover  {
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: black;
+}
+
 /* Header & Footer Styles */
 
 nav {
@@ -151,20 +173,6 @@ textarea {
     width: 100%;
 }
 
-#submit-button {
-    padding: 10px;
-    width: 70px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-}
-
-#submit-button:hover {
-    cursor: pointer;
-    background-color: var(--secondary);
-    color: black;
-}
-
 /* Login Page Styles */
 
 #forms {
@@ -188,18 +196,4 @@ textarea {
 
 .form-group label {
     margin-right: 10px;
-}
-
-.form-group button {
-    padding: 10px;
-    width: 70px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-}
-
-.form-group button:hover {
-    cursor: pointer;
-    background-color: var(--secondary);
-    color: black;
 }

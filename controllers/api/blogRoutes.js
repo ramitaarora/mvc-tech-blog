@@ -60,4 +60,25 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     }
 })
 
+router.put('/edit', async (req, res) => {
+    try {
+        const blogPostData = await Posts.update(
+            {
+                post_name: req.body.post_name,
+                post_content: req.body.post_content,
+                author_id: req.session.user_id,
+            },
+            {
+                where: {
+                    id: req.body.id,
+                }
+            }
+        )
+        res.status(200).json(blogPostData)
+    } catch(err) {
+        res.status(400).json(err)
+    }
+    
+})
+
 module.exports = router;
