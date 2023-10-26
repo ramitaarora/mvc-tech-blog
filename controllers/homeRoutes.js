@@ -11,17 +11,25 @@ router.get('/', async (req, res) => {
     // console.log(blogPosts);
 
     res.render('homepage', {
-        logged_in: true,
+        logged_in: req.session.logged_in,
         blogPosts,
     });
 });
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    if (!req.session.logged_in) {
+        res.render('login');
+    } else {
+        res.redirect('/', {logged_in: req.session.logged_in});
+    }
 });
 
 router.get('/dashboard', (req, res) => {
-    res.render('dashboard');
+    if (!req.session.logged_in) {
+        res.render('login');
+    } else {
+        res.render('dashboard', {logged_in: req.session.logged_in});
+    }
 });
 
 module.exports = router;
