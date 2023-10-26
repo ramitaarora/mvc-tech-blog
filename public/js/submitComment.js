@@ -8,7 +8,7 @@ formSubmit.addEventListener('submit', async(event) => {
             method: 'POST',
             body: JSON.stringify({ 
                 comment_content: commentBox.value, 
-                post_id: (window.location.pathname).slice(-1),
+                post_id: formSubmit.getAttribute('data-id'),
             }),
             headers: { 'Content-Type': 'application/json' },
         });

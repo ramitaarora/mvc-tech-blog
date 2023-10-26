@@ -28,7 +28,7 @@
         <h3>Submit a Comment!</h3>
         <br>
         {{#if logged_in}}
-        <form id="add-comment">
+        <form id="add-comment" data-id="{{blogPost.id}}">
             <label for="id">Add your comment:</label>
             <textarea id="comment" name="comment" rows="6" maxlength="255" placeholder="Write your comment here..." required></textarea>
             <input id="submit-button" type="submit"/>
