@@ -14,10 +14,12 @@ router.get('/:id', async (req, res) => {
             include: [{model: User}]
         })
         const comments = commentData.map((comment => comment.get({plain:true})));
-        console.log(comments);
+        // console.log(comments);
 
         res.render('post', {
             blogPost,
+            comments,
+            logged_in: req.session.logged_in,
         });
 
     } catch (err) {

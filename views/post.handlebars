@@ -10,6 +10,16 @@
 
     <div id="comments">
         <h2>Comments</h2>
+        {{#if comments.length}}
+        {{#each comments as |comment|}}
+            <div id="comment-box">
+                <h3>{{comment.user.name}}</h3>
+                <p>{{comment.comment_content}}</p>
+            </div>
+        {{/each}}
+        {{else}}
+        <p>No comments yet!</p>
+        {{/if}}
     </div>
 
     <div id="add-comment-form">
