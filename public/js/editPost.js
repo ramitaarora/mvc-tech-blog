@@ -5,11 +5,12 @@ const deleteButton = document.querySelector('#delete-button');
 
 updateButton.addEventListener('click', async (event) => {
     event.preventDefault();
+    // console.log(updateButton.getAttribute('data-id'))
     if (editTitle.value && editPost.value) {
         const response = await fetch('/api/blog/edit', {
             method: 'PUT',
             body: JSON.stringify({
-                id: (window.location.pathname).slice(-1),
+                id: updateButton.getAttribute('data-id'),
                 post_name: editTitle.value,
                 post_content: editPost.value,
             }),
@@ -23,6 +24,5 @@ updateButton.addEventListener('click', async (event) => {
         }
     } else {
         alert('No data to update!')
-    }
-    
+    };
 })
