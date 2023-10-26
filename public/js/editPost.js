@@ -25,16 +25,14 @@ updateButton.addEventListener('click', async (event) => {
     } else {
         alert('No data to update!')
     };
-})
+});
 
-deleteButton.addEventListener('click', async(event) => {
+deleteButton.addEventListener('click', (event) => {
     event.preventDefault();
     const confirm = window.confirm("Are you sure you want to delete?")
     if (confirm) {
-        const response = await fetch('/api/blog/delete', {
+        const response = fetch(`/api/blog/delete/${updateButton.getAttribute('data-id')}`, {
             method: 'DELETE',
-            body: JSON.stringify( { id: updateButton.getAttribute('data-id')}),
-            headers: { 'Content-Type': 'application/json' },
         })
         if (response.ok) {
             alert('Post deleted!');
@@ -42,4 +40,4 @@ deleteButton.addEventListener('click', async(event) => {
             alert(response.statusText);
         }
     }
-})
+});

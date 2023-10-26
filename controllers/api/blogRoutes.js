@@ -81,11 +81,11 @@ router.put('/edit', async (req, res) => {
     
 })
 
-router.delete('/delete', async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
     try {
         const blogPostData = await Posts.destroy( { 
             where: { 
-                id: req.body.id,
+                id: req.params.id,
             }
         });
         res.status(200).json(blogPostData);
