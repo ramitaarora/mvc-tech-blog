@@ -30,12 +30,12 @@
         {{#if logged_in}}
         <form id="add-comment">
             <label for="id">Add your comment:</label>
-            <textarea id="comment" name="comment" rows="6" placeholder="Write your comment here..." required></textarea>
+            <textarea id="comment" name="comment" rows="6" maxlength="255" placeholder="Write your comment here..." required></textarea>
             <input id="submit-button" type="submit"/>
         </form>
         {{else}}
         <p>Please <a href="/login">log in</a>.</p>
         {{/if}}
     </div>
-
+<script src="/js/submitComment.js"></script>
 </section>
