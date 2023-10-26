@@ -3,7 +3,7 @@
         <div id="blog-post"><a href='/api/blog/{{post.id}}'>
             <div id="post-header">
                 <h2>{{post.post_name}}</h2>
-                <p>Author: {{post.user.name}}</p>
+                <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
             </div>
             <div id="post-preview">
                 <p>{{post.post_content}}</p>

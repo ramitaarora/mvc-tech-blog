@@ -1,7 +1,7 @@
 <section id="blogpost">
     <div id="blogpost-heading">
         <h1>{{blogPost.post_name}}</h1>
-        <p>Author: {{blogPost.user.name}}</p>
+        <p>Posted by {{blogPost.user.name}} on {{format_date blogPost.date_created}}</p>
         <hr>
     </div>
 
@@ -15,6 +15,7 @@
         {{#each comments as |comment|}}
             <div id="comment-box">
                 <h3>{{comment.user.name}}</h3>
+                <h6>{{format_date comment.date_created}}</h6>
                 <p>{{comment.comment_content}}</p>
             </div>
         {{/each}}
