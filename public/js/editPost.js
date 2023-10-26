@@ -20,9 +20,26 @@ updateButton.addEventListener('click', async (event) => {
             alert('Post saved!');
         }
         else {
-            alert('Error!')
+            alert(response.statusText);
         }
     } else {
         alert('No data to update!')
     };
+})
+
+deleteButton.addEventListener('click', async(event) => {
+    event.preventDefault();
+    const confirm = window.confirm("Are you sure you want to delete?")
+    if (confirm) {
+        const response = await fetch('/api/blog/delete', {
+            method: 'DELETE',
+            body: JSON.stringify( { id: updateButton.getAttribute('data-id')}),
+            headers: { 'Content-Type': 'application/json' },
+        })
+        if (response.ok) {
+            alert('Post deleted!');
+        } else {
+            alert(response.statusText);
+        }
+    }
 })

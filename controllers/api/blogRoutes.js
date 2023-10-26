@@ -81,4 +81,17 @@ router.put('/edit', async (req, res) => {
     
 })
 
+router.delete('/delete', async (req, res) => {
+    try {
+        const blogPostData = await Posts.destroy( { 
+            where: { 
+                id: req.body.id,
+            }
+        });
+        res.status(200).json(blogPostData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
+
 module.exports = router;
