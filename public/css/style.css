@@ -15,10 +15,6 @@ main {
     margin: 20px;
 }
 
-body {
-    min-height: 100vh;
-}
-
 /* Button Styles */
 
 #submit-button, 
