@@ -21,7 +21,8 @@ main {
 .form-group button, 
 #update-button, 
 #delete-button,
-#new-post-button {
+#new-post-button,
+#submit-post-button {
     padding: 10px;
     width: 100px;
     background-color: var(--primary);
@@ -33,7 +34,8 @@ main {
 .form-group button:hover, 
 #update-button:hover, 
 #delete-button:hover,
-#new-post-button:hover  {
+#new-post-button:hover,
+#submit-post-button:hover  {
     cursor: pointer;
     background-color: var(--secondary);
     color: black;

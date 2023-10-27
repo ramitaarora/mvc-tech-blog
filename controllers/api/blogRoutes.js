@@ -15,6 +15,19 @@ router.post('/comment', withAuth, async (req, res) => {
     }
 })
 
+router.post('/add', withAuth, async (req, res) => {
+    try {
+        const blogPostData = await Posts.create( {
+            post_name: req.body.post_name,
+            post_content: req.body.post_content,
+            author_id: req.session.user_id,
+        });
+        res.status(200).json(blogPostData);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+})
+
 router.put('/edit', withAuth, async (req, res) => {
     try {
         const blogPostData = await Posts.update(
