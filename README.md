@@ -23,7 +23,7 @@ To start, run `npm start`.
 
 ## Usage
 
-This project has been deployed using Heroku at:
+This project has been deployed using Heroku at: https://mvc-tech-blog-indurkhya-ecc84c878b3c.herokuapp.com/.
 
 <img src="./public/images/tech-blog-screenshot.png" alt="screenshot"/>
 
