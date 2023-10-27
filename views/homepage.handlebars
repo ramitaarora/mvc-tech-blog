@@ -1,13 +1,13 @@
 <main>
     {{#each blogPosts as |post|}}
-        <div id="blog-post"><a href='/api/blog/{{post.id}}'>
+        <div id="blog-post"><a href='/post/{{post.id}}'>
             <div id="post-header">
                 <h2>{{post.post_name}}</h2>
                 <p>Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
             </div>
             <div id="post-preview">
                 <p>{{post.post_content}}</p>
-                <a href='/api/blog/{{post.id}}'><p class="read-more">Read More</p>
+                <a href='/post/{{post.id}}'><p class="read-more">Read More</p>
             </div>
         </div></a></a>
     {{/each}}
